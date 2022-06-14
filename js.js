@@ -72,21 +72,21 @@ function calculateBMR() {
 
     if (document.getElementById("lb").checked == true) {
             
-        weight = weight * 0.45;
+        weight = weight * 0.45359237;
     }
 
     if (document.getElementById("feet").checked == true) {
             
         height = height * 30.48;
-        
-    }else
+      
+    }
 
     if (gender == 'female') {
         BMR = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
     } else
         BMR = 66.5 + (13.75 * weight) + (5.003 * height) - (6.75 * age)
 
-    document.getElementById("bmr").value = BMR;
+    document.getElementById("bmr").value = BMR.toFixed(2);
 
     var calories;
 
@@ -94,7 +94,7 @@ function calculateBMR() {
 
     calories = BMR * activity
 
-    document.getElementById("calories").value = calories;
+    document.getElementById("calories").value = calories.toFixed(2);
 
 
 
