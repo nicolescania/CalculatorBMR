@@ -98,7 +98,6 @@ function calculateBMR() {
 
 
 
-
 }
 
 function playmyaudio() {
